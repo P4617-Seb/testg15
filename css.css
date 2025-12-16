@@ -1,0 +1,100 @@
+:root{
+    --primary : #d2691d;
+    --dark : #753a10;
+}
+.btn-custom{
+    background-color: var(--primary);
+}
+.btn-custom:hover{
+    background-color: var(--dark);
+}
+.section2,
+.section3,
+.section4,
+.section5{
+    padding-top: 60px;
+}
+.navbar{
+    background-color: var(--primary);
+}
+.footer{
+    background-color: var(--dark);
+    color: #fff;
+}
+.flipbox-outer{
+    aspect-ratio: 1/1;
+    width: 100%;
+    perspective: 1000px;
+}
+.flipbox{
+    transition-duration: 1s;
+}
+.flipbox-outer:hover .flipbox{
+    transform: rotatey(180deg);
+}
+.flipbox{
+    position: relative;
+    transform-style: preserve-3d;
+}
+.flipbox .front , .flipbox .back{
+    position: absolute;
+    backface-visibility: hidden;
+}
+.flipbox .back{
+    transform: rotateY(180deg);
+}    
+
+.bd-body{
+    background-image: url('https://picsum.photos/id/261/1600/900');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+}
+.bd-content{
+    background-color: rgba(255, 255, 255,0.1);
+    backdrop-filter: blur(2px) brightness(1.1);
+    border-radius: 20px;
+}
+.wrapper{
+    position: relative;
+    overflow: hidden;
+}
+.text-wrapper{
+    position: absolute;
+    top: 100%;
+    color: #fff;
+    transition-duration: 00.5s;
+}
+.wrapper:hover .text-wrapper{
+    top: 50%;
+}
+
+.wrapper:before{
+   content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image:  linear-gradient(180deg,rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 1) 100%);
+    top: 100%;
+    transition-duration: 0.5s;
+}
+.wrapper:hover:before{
+    top: 0;
+}
+
+@media screen and (max-width:991){
+    
+}
+@media screen and (max-width : 767px){
+    h2{
+        font-size: 12px;
+    }
+}
+
+
+
+
+
+
+
+
